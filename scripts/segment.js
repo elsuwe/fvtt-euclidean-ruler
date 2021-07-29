@@ -7,7 +7,7 @@ import { log } from "./module.js";
   *                                    Each should be an object with the property "ray" containing a Ray. 
   * @return {Number} The distance of the segment.
   */
-export function distanceFunctionManhattan(distance_segments) {
+export function distanceFunctionManhattan(distance_segments, options = {}) {
   log(`distance segments`, distance_segments);
 
   return distance_segments.reduce((acc, segment) => {
