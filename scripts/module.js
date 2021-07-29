@@ -1,4 +1,4 @@
-export const MODULE_ID = 'speedruler';
+export const MODULE_ID = 'manhattanruler';
 
 export function log(...args) {
   try {
@@ -11,16 +11,16 @@ export function log(...args) {
 
 
 
-Hooks.once('init', async function() {
-  log('Initializing.');
-});
+// Hooks.once('init', async function() {
+//   log('Initializing.');
+// });
 
 // setup is after init; before ready. 
 // setup is called after settings and localization have been initialized, 
 // but before entities, packs, UI, canvas, etc. has been initialized
-Hooks.once('setup', async function() {
-  log("Setup.");
-});
+// Hooks.once('setup', async function() {
+//   log("Setup.");
+// });
 
 // modules ready
 // ready is called once everything is loaded up and ready to go.
