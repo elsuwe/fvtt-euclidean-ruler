@@ -11,6 +11,8 @@ export function distanceFunctionManhattan(distance_segments) {
   log(`distance segments`, distance_segments);
 
   return distance_segments.reduce((acc, segment) => {
-    return acc + Math.abs(segment.ray.A.x - segment.ray.B.x) + Math.abs(segment.ray.A.y - segment.ray.B.y);
+    const pixel_distance = Math.abs(segment.ray.A.x - segment.ray.B.x) + Math.abs(segment.ray.A.y - segment.ray.B.y);
+    const grid_distance = pixel_distance / canvas.scene.data.grid * canvas.scene.data.gridDistance;
+    return acc + grid_distance;
   }, 0);
 }
