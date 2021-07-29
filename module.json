@@ -1,7 +1,7 @@
 {
   "name": "manhattanruler",
   "title": "Manhattan Ruler",
-  "description": "",
+  "description": "Use Manhattan distance measurement with Foundry ruler",
   "version": "This is auto replaced",
   "library": false,
   "manifestPlusVersion": "1.0.0",
