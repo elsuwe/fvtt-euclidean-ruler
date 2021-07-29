@@ -1,3 +1,5 @@
+import { registerManhattanRuler } from "./patching.js";
+
 export const MODULE_ID = 'manhattanruler';
 
 export function log(...args) {
