@@ -1,18 +1,27 @@
-import { log } from "./module.js";
+/* globals
+canvas
+*/
+"use strict";
 
  /*
+  * Override Ruler.prototype._computeDistance.
   * Function to measure the Manhattan distance between two points on the 2D canvas.
-  * Measures absolute distance between the points on each axis
-  * @param {[{ray: Ray}]} segments     An Array of measured movement segments. (1 in default implementation)   
-  *                                    Each should be an object with the property "ray" containing a Ray. 
+  * @param {boolean} gridSpaces    Base distance on the number of grid spaces moved?
   * @return {Number} The distance of the segment.
   */
-export function distanceFunctionManhattan(distance_segments, options = {}) {
-  log(`distance segments`, distance_segments);
+export function _computeDistanceRuler(gridSpaces) { // eslint-disable-line no-unused-vars
+  const { grid, gridDistance } = canvas.scene.data;
+  const gridUnits = grid * gridDistance;
+  let totalDistance = 0;
+  const ln = this.segments.length;
+  for ( let i = 0; i < ln; i += 1 ) {
+    const s = this.segments[i];
+    const pixel_distance = Math.abs(s.ray.A.x - s.ray.B.x) + Math.abs(s.ray.A.y - s.ray.B.y);
+    const d = pixel_distance / gridUnits;
 
-  return distance_segments.reduce((acc, segment) => {
-    const pixel_distance = Math.abs(segment.ray.A.x - segment.ray.B.x) + Math.abs(segment.ray.A.y - segment.ray.B.y);
-    const grid_distance = pixel_distance / canvas.scene.data.grid * canvas.scene.data.gridDistance;
-    return acc + grid_distance;
-  }, 0);
+    s.last = i === (ln - 1);
+    s.distance = d;
+    totalDistance += d;
+    s.text = this._getSegmentLabel(s, totalDistance);
+  }
 }

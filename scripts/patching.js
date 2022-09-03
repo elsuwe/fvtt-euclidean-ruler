@@ -1,6 +1,10 @@
+/* globals
+libWrapper
+*/
+
 import { MODULE_ID } from "./module.js";
-import { distanceFunctionManhattan } from "./segment.js";
+import { _computeDistanceRuler } from "./segment.js";
 
 export function registerManhattanRuler() {
-  libWrapper.register(MODULE_ID, 'window.libRuler.RulerSegment.distanceFunction', distanceFunctionManhattan, 'OVERRIDE');
+  libWrapper.register(MODULE_ID, "Ruler.prototype._computeDistance", _computeDistanceRuler, libWrapper.OVERRIDE);
 }
