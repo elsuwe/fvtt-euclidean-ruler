@@ -7,7 +7,7 @@ Hooks
 import { registerManhattanRuler } from "./patching.js";
 import { registerSettings, getSetting, SETTINGS } from "./settings.js";
 
-export const MODULE_ID = "euclidianruler";
+export const MODULE_ID = "euclideanruler";
 
 export function log(...args) {
   try {

@@ -1,9 +1,9 @@
 {
-  "name": "euclidianruler",
+  "name": "euclideanruler",
   "minimumCoreVersion": "10",
-  "id": "euclidianruler",
-  "title": "Euclidian Ruler",
-  "description": "Use Euclidian distance measurement with Foundry Ruler",
+  "id": "euclideanruler",
+  "title": "Euclidean Ruler",
+  "description": "Use Euclidean distance measurement with Foundry Ruler",
   "version": "This is auto replaced",
   "library": false,
   "manifestPlusVersion": "1.0.0",
