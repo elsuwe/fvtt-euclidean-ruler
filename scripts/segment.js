@@ -15,8 +15,8 @@ import { getSetting, SETTINGS } from "./settings.js";
 export function _computeDistanceRuler(wrapper, gridSpaces) { // eslint-disable-line no-unused-vars
   if ( getSetting(SETTINGS.ADD_CONTROL) ) {
     const token_controls = ui.controls.controls.find(elem => elem.name === "token");
-    const manhattan_control = token_controls.tools.find(elem => elem.name === "manhattan-distance");
-    if ( !manhattan_control.active ) return wrapper(gridSpaces);
+    const euclidean_control = token_controls.tools.find(elem => elem.name === "euclidean-distance");
+    if ( !euclidean_control.active ) return wrapper(gridSpaces);
   }
 
   const { size, distance } = canvas.scene.dimensions;
@@ -25,12 +25,14 @@ export function _computeDistanceRuler(wrapper, gridSpaces) { // eslint-disable-l
   const ln = this.segments.length;
   for ( let i = 0; i < ln; i += 1 ) {
     const s = this.segments[i];
-    const pixel_distance = Math.abs(s.ray.A.x - s.ray.B.x) + Math.abs(s.ray.A.y - s.ray.B.y);
-    const d = pixel_distance * gridConversion;
+    const x_distance = Math.abs(s.ray.A.x - s.ray.B.x)
+    const y_distance = Math.abs(s.ray.A.y - s.ray.B.y)
+    const pixel_distance = Math.sqrt(x_distance ** 2 + y_distance ** 2);
+    const d = Math.round(pixel_distance * gridConversion);
 
     s.last = i === (ln - 1);
     s.distance = d;
     totalDistance += d;
-    s.text = this._getSegmentLabel(s, totalDistance);
+    this.totalDistance = totalDistance;
   }
 }

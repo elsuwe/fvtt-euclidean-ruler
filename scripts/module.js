@@ -4,7 +4,7 @@ Hooks
 */
 "use strict";
 
-import { registerManhattanRuler } from "./patching.js";
+import { registerEuclideanRuler } from "./patching.js";
 import { registerSettings, getSetting, SETTINGS } from "./settings.js";
 
 export const MODULE_ID = "euclideanruler";
@@ -30,7 +30,7 @@ Hooks.once("devModeReady", ({ registerPackageDebugFlag }) => {
 });
 
 Hooks.once("libWrapper.Ready", async function() {
-  registerManhattanRuler();
+  registerEuclideanRuler();
 });
 
 Hooks.on("getSceneControlButtons", (controls) => {
@@ -38,9 +38,9 @@ Hooks.on("getSceneControlButtons", (controls) => {
 
   const tokenTools = controls.find(c => c.name === "token");
   tokenTools.tools.push({
-    name: "manhattan-distance",
+    name: "euclidean-distance",
     title: game.i18n.localize(`${MODULE_ID}.controls.${SETTINGS.ADD_CONTROL}.name`),
-    icon: "fa-solid fa-city",
+    icon: "fa-solid fa-chess-board",
     toggle: true
   });
 });
