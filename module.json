@@ -1,6 +1,6 @@
 {
   "name": "euclideanruler",
-  "minimumCoreVersion": "10",
+  "minimumCoreVersion": "11",
   "id": "euclideanruler",
   "title": "Euclidean Ruler",
   "description": "Use Euclidean distance measurement with Foundry Ruler",
