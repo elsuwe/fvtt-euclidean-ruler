@@ -1,6 +1,6 @@
 {
-  "manhattanruler.settings.add-control-toggle.name": "Add control toggle",
-  "manhattanruler.settings.add-control-toggle.hint": "Add a toggle to token controls to enable/disable manhattan distance ruler measurement.",
+  "euclideanruler.settings.add-control-toggle.name": "Add control toggle",
+  "euclideanruler.settings.add-control-toggle.hint": "Add a toggle to token controls to enable/disable Euclidean distance ruler measurement.",
 
-  "manhattanruler.controls.add-control-toggle.name": "Measure using Manhattan distance"
+  "euclideanruler.controls.add-control-toggle.name": "Measure using Euclidean distance"
 }
