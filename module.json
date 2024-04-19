@@ -1,21 +1,20 @@
 {
-  "name": "manhattanruler",
+  "name": "euclidianruler",
   "minimumCoreVersion": "10",
-  "id": "manhattanruler",
-  "title": "Manhattan Ruler",
-  "description": "Use Manhattan distance measurement with Foundry ruler",
+  "id": "euclidianruler",
+  "title": "Euclidian Ruler",
+  "description": "Use Euclidian distance measurement with Foundry Ruler",
   "version": "This is auto replaced",
   "library": false,
   "manifestPlusVersion": "1.0.0",
   "compatibility": {
-    "minimum": "10",
-    "verified": "10.284"
+    "minimum": "11",
+    "verified": "11.315"
   },
   "authors": [
     {
-      "name": "caewok",
-      "url": "https://github.com/caewok",
-      "discord": "caewok#9192"
+      "name": "elsuwe",
+      "url": "https://github.com/elsuwe"
     }
   ],
   "relationships": {
