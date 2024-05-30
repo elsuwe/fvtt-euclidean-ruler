@@ -1,5 +1,6 @@
 [![Version (latest)](https://img.shields.io/github/v/release/elsuwe/fvtt-euclidean-ruler)](https://github.com/elsuwe/fvtt-euclidean-ruler/releases/latest)
-[![Foundry Version](https://img.shields.io/badge/dynamic/json.svg?url=https://github.com/elsuwe/fvtt-euclidean-ruler/releases/latest/download/module.json&label=Foundry%20Version&query=$.minimumCoreVersion&colorB=blueviolet)](https://github.com/elsuwe/fvtt-euclidean-ruler/releases/latest)
+[![Foundry Version](https://img.shields.io/badge/dynamic/json.svg?url=https://github.com/elsuwe/fvtt-euclidean-ruler/releases/latest/download/module.json&label=Minimal%20Foundry%20Version&query=$.minimumCoreVersion&colorB=blueviolet)](https://github.com/elsuwe/fvtt-euclidean-ruler/releases/latest)
+[![Foundry Version](https://img.shields.io/badge/dynamic/json.svg?url=https://github.com/elsuwe/fvtt-euclidean-ruler/releases/latest/download/module.json&label=Verified%20Foundry%20Version&query=$.compatibility.verified&colorB=blueviolet)](https://github.com/elsuwe/fvtt-euclidean-ruler/releases/latest)
 [![License](https://img.shields.io/github/license/elsuwe/fvtt-euclidean-ruler)](LICENSE)
 
 ![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https://forge-vtt.com/api/bazaar/package/euclideanruler&colorB=4aa94a)
